@@ -1,142 +1,273 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Carrinho - Frigorífico Flor do Campo</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; background: #faf6f0; color: #333; line-height: 1.5; padding-top: 100px; }
-    a { color: inherit; text-decoration: none; }
-    ul { list-style: none; }
-    .conteudo { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-    .cabecalho { position: fixed; top: 0; left: 0; right: 0; z-index: 10; background: #8b1e1e; color: #fff; }
-    .cabecalho-interno { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
-    .logo { font-size: 22px; font-weight: bold; }
-    .busca { display: flex; flex: 1; min-width: 220px; gap: 6px; }
-    .busca input { flex: 1; padding: 8px 12px; border: none; border-radius: 6px; font-size: 15px; }
-    .busca button { padding: 8px 16px; border: none; border-radius: 6px; background: #f2b632; font-weight: bold; cursor: pointer; }
-    .menu { display: flex; gap: 16px; }
-    .menu a:hover { text-decoration: underline; }
-
-    .rodape { background: #333; color: #ddd; text-align: center; padding: 24px 20px; margin-top: 50px; font-size: 14px; }
-
-    .botao { display: inline-block; padding: 10px 20px; background: #8b1e1e; color: #fff; border: none; border-radius: 6px; font-size: 15px; cursor: pointer; }
-    .botao:hover { background: #6a1515; }
-    .botao-contorno { background: #fff; color: #8b1e1e; border: 1px solid #8b1e1e; }
-    .botao-contorno:hover { background: #8b1e1e; color: #fff; }
-    .botao-total { width: 100%; }
-
-    .titulo { color: #8b1e1e; margin: 30px 0 20px; font-size: 28px; }
-    .colunas { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
-    .coluna-grande { flex: 2 1 500px; }
-    .coluna-pequena { flex: 1 1 280px; }
-
-    .tabela-rolavel { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e5dccf; }
-    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e5dccf; }
-    th { background: #f1e8da; }
-    .quantidade { width: 70px; padding: 6px; border: 1px solid #ccc; border-radius: 6px; }
-    .remover { color: #b3261e; font-size: 14px; }
-    .remover:hover { text-decoration: underline; }
-    .continuar { margin-top: 16px; }
-
-    .cartao { background: #fff; border: 1px solid #e5dccf; border-radius: 8px; padding: 20px; }
-    .cartao h2 { color: #8b1e1e; margin-bottom: 12px; font-size: 20px; }
-    .linha { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
-    .linha-total { font-weight: bold; font-size: 20px; color: #8b1e1e; border-bottom: none; margin-bottom: 14px; }
-    .verde { color: #2e7d32; }
-    label { display: block; margin: 10px 0 4px; font-size: 14px; }
-    .campo { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; background: #fff; }
-    form .botao { margin-top: 16px; }
-
-    @media (max-width: 800px) { body { padding-top: 160px; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <title>Carrinho</title>
 </head>
 <body>
-
-  <header class="cabecalho">
-    <div class="cabecalho-interno">
-      <a class="logo" href="index.html">🥩 Frigorífico Flor do Campo</a>
-      <form class="busca" action="produtos.html" method="get" role="search">
-        <input type="search" name="busca" placeholder="Buscar produtos...">
-        <button type="submit">Buscar</button>
-      </form>
-      <ul class="menu">
-        <li><a href="produtos.html">Produtos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="login.html">Entrar</a></li>
-        <li><a href="carrinho.html">🛒 Carrinho (3)</a></li>
-      </ul>
+    <div class="Menu">
+        <img class="logo" src="image/Logo_e_Nome_E-commerce-removebg-preview.png" alt="logo">
+        <label for="text"></label>
+        <input type="text" name="text" id="text" placeholder="Clique aqui para buscar produtos e muito mais...">
+        <h1 class="p1">Carrinho</h1>
+        <h2><a href="historico.html"><i class="bi bi-cart-check-fill caca"></i></a></h2>
+        <a href="Menu.html"><button type="button"><img src="image/seta.png" alt="Voltar" class="seta"></button></a>
     </div>
-  </header>
 
-  <main class="conteudo">
+    <div class="carrinho-container">
+        <div class="caixa-produtos">
+            <h3>Produtos <span class="full-badge">FULL</span></h3>
 
-    <h1 class="titulo">🛒 Meu carrinho</h1>
+            <div class="item-produto">
+                <img src="image/Principia.jpg" alt="Principia Kit Essencial" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Principia Kit Essencial Gl-03 + Ch + Vc + Ps Sensível Dia/noite</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 117,80</strong>
+                </div>
+            </div>
 
-    <div class="colunas">
+            <div class="item-produto">
+                <img src="image/Chinelo.jpg" alt="Chinelo Cartago Masculino" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Chinelo Cartago Masculino Casual Confortável Macio Original</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>2</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 48,99</strong>
+                </div>
+            </div>
 
-      <section class="coluna-grande">
-        <div class="tabela-rolavel">
-          <table>
-            <thead>
-              <tr><th>Produto</th><th>Preço (kg)</th><th>Qtd (kg)</th><th>Subtotal</th><th></th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>🥩 Picanha Bovina</td>
-                <td>R$ 79,90</td>
-                <td><input class="quantidade" type="number" value="1" min="1"></td>
-                <td>R$ 79,90</td>
-                <td><a class="remover" href="carrinho.html">Remover</a></td>
-              </tr>
-              <tr>
-                <td>🌭 Linguiça Toscana</td>
-                <td>R$ 24,90</td>
-                <td><input class="quantidade" type="number" value="2" min="1"></td>
-                <td>R$ 49,80</td>
-                <td><a class="remover" href="carrinho.html">Remover</a></td>
-              </tr>
-              <tr>
-                <td>🍖 Costela Bovina</td>
-                <td>R$ 32,90</td>
-                <td><input class="quantidade" type="number" value="1" min="1"></td>
-                <td>R$ 32,90</td>
-                <td><a class="remover" href="carrinho.html">Remover</a></td>
-              </tr>
-            </tbody>
-          </table>
+            <div class="item-produto">
+                <img src="image/Radio.jpg" alt="Rádio Retrô Vintage" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Rádio Retrô Vintage Am Fm Sw Antigo Portatil Analogico Usb Bluetooth Recarregável Bivolt 127v 220v Pilha Tomada Usb Mp3 Aux Antena Led Alça Cartão de Memória Risemberg</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 96,18</strong>
+                </div>
+            </div>
+
+            <div class="item-produto">
+                <img src="image/ps2.jpg" alt="Sony Playstation 2 Slim" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Sony Playstation 2 Slim + Hdmi + 2 Controles + 5 Jogos + Nf (Recondicionado)</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 889,90</strong>
+                </div>
+            </div>
+
+            <div class="item-produto">
+                <img src="image/motor.jpg" alt="Gerador De Energia" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Gerador De Energia A Gasolina 3,75Kva 110v/220v C/ Avr Deffer</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 1419,33</strong>
+                </div>
+            </div>
+
+            <div class="item-produto">
+                <img src="image/mouse.jpg" alt="Mouse" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Mouse Gamer Com Fio XZone GMF-03 3200DPI 8 Botões LED Preto</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 100,18</strong>
+                </div>
+            </div>
+
+            <div class="item-produto">
+                <img src="image/monitor.jpg" alt="Monitor" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Monitor AOC 24" 100Hz 1ms Gaming HDMI 24B35HM2</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 477,42</strong>
+                </div>
+            </div>
+
+            <div class="item-produto">
+                <img src="image/relogio.jpg" alt="Relógio" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Relógio Casio Masculino G-shock Digital Preto DW-5600BB-1DR</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 290,90</strong>
+                </div>
+            </div>
+
+            <div class="item-produto">
+                <img src="image/quarda roupa.jpg" alt="Guarda-roupa" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Guarda Roupa Casal 6 Portas Easy Slim Com Espelho E Pés Amêndoa/Off white</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 859,90</strong>
+                </div>
+            </div>
+
+            <div class="item-produto">
+                <img src="image/teclado.jpg" alt="Teclado" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Teclado Gamer Semi Mecânico Xzone Gts-01 Iluminação Led Preto Português Brasil</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 128,24</strong>
+                </div>
+            </div>
+
+            <div class="item-produto">
+                <img src="image/violao.jpg" alt="Violão" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Violão Clássico Acústico Iniciantes Destros Cordas De Aço Cor Preto</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 230,90</strong>
+                </div>
+            </div>
+
+            <div class="item-produto">
+                <img src="image/fone.jpg" alt="Fone" class="img-produto">
+                <div class="detalhes-produto">
+                    <h4>Headset Gamer 7.1 Surround Channel Com Microfone Hgss71 Cor Cinza E Preto</h4>
+                    <div class="acoes-item">
+                        <a href="#">Excluir</a> | <a href="#">Salvar</a> | <a href="#">Comprar</a>
+                    </div>
+                </div>
+                <div class="quantidade-controle">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <div class="preco-produto">
+                    <strong>R$ 359,39</strong>
+                </div>
+            </div>
+
+            <div class="frete-secao">
+                <p>Frete R$ 19,00</p>
+                <div class="barra-progresso"></div>
+                <small>Adicione mais R$ 117,80 para conseguir frete grátis</small>
+            </div>
         </div>
-        <a href="produtos.html" class="botao botao-contorno continuar">← Continuar comprando</a>
-      </section>
 
-      <aside class="coluna-pequena cartao">
-        <h2>Resumo do pedido</h2>
-        <div class="linha"><span>Subtotal</span><span>R$ 162,60</span></div>
-        <div class="linha"><span>Frete</span><span class="verde">Grátis</span></div>
-        <div class="linha linha-total"><span>Total</span><span>R$ 162,60</span></div>
+        <div class="caixa-resumo">
+            <h3>Resumo da compra</h3>
 
-        <form action="pedido.html" method="get">
-          <label for="cep">CEP para entrega</label>
-          <input class="campo" type="text" id="cep" placeholder="00000-000">
-          <label for="pagamento">Forma de pagamento</label>
-          <select class="campo" id="pagamento">
-            <option>Pix</option>
-            <option>Cartão de crédito</option>
-            <option>Boleto</option>
-          </select>
-          <button type="submit" class="botao botao-total">Finalizar compra</button>
-        </form>
-      </aside>
+            <div class="linha-resumo">
+                <p>Produtos (12 itens)</p>
+                <p>R$ </p>
+            </div>
 
+            <div class="linha-resumo">
+                <p>Frete</p>
+                <p>R$ 19,00</p>
+            </div>
+
+            <p class="cupom-link">Inserir código do cupom</p>
+
+            <hr>
+
+            <div class="linha-resumo total">
+                <p>Total</p>
+                <p>R$ 5.068,12</p>
+            </div>
+
+            <a href="compratotal.html" class="pd-btn pd-btn-comprar">Continuar a compra</a>
+        </div>
     </div>
-  </main>
-
-  <footer class="rodape">
-    <p>&copy; 2026 Frigorífico Flor do Campo · Seg a Sáb, 8h às 18h · (00) 0000-0000</p>
-  </footer>
-
 </body>
 </html>

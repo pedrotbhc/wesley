@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <title>Pagamento</title>
+</head>
+<body>
+    <div class="Menu">
+        <img class="logo" src="../image/Logo_e_Nome_E-commerce-removebg-preview.png" alt="logo">
+        <label for="text"></label>
+        <input type="text" name="text" id="text" placeholder="Clique aqui para buscar produtos e muito mais...">
+        <a href="../produtos/produto11.html"button type="button"><img src="../image/seta.png" alt="Voltar"class="seta"></button></a>
+        <h1 class="p2">Pagamento</h1>
+    </div>
+
+    <div class="pg-pagina">
+
+        <div class="pg-opcoes">
+            <h2>Escolha como pagar</h2>
+
+            <label class="pg-opcao">
+                <input type="radio" name="pagamento" value="pix" checked>
+                <i class="bi bi-qr-code pg-icone"></i>
+                <div class="pg-texto">
+                    <strong>Pix</strong>
+                    <span>Aprovação imediata</span>
+                    <span class="pg-verde">5% de desconto</span>
+                </div>
+                <span class="pg-selo">RECOMENDADO</span>
+            </label>
+
+            <label class="pg-opcao">
+                <input type="radio" name="pagamento" value="cartao">
+                <i class="bi bi-credit-card pg-icone"></i>
+                <div class="pg-texto">
+                    <strong>Cartão de crédito</strong>
+                    <span>Parcele em até 12x</span>
+                    <span class="pg-verde">Até 3x sem juros</span>
+                </div>
+            </label>
+
+            <label class="pg-opcao">
+                <input type="radio" name="pagamento" value="boleto">
+                <i class="bi bi-upc-scan pg-icone"></i>
+                <div class="pg-texto">
+                    <strong>Boleto bancário</strong>
+                    <span>Aprovação em até 2 dias úteis</span>
+                </div>
+            </label>
+
+            <a href="../pedido/pedido3.html" class="pg-continuar">Finalizar Compra</a>
+        </div>
+
+        <div class="pg-resumo">
+            <h3>Resumo da compra</h3>
+            <img src="../image/mouse.jpg" alt="produto 5">
+            <p>Mouse Gamer Com Fio XZone GMF-03 3200DPI 8 Botões LED Preto</p>
+            <div class="pg-linha"><span>Produto</span><span>$ 128,24</span></div>
+            <div class="pg-linha"><span>Frete</span><span class="pg-verde">Grátis</span></div>
+            <a href="#" class="pg-cupom">Inserir código do cupom</a>
+            <div class="pg-linha pg-total"><span>Você pagará</span><span>$ 100,18</span></div>
+        </div>
+        
+    </div>
+</body>
+</html>

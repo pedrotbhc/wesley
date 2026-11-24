@@ -1,2 +1,0 @@
-1. os arquivos dentro de Ecommerce/imagens sao todas fotos para ser utilizadas para quandos todos os produtos estiverem completos, ainda nao tao totalmente divisíveis
-2. nao compartilhe o código pq tem chaves de acesso restrito a contas pessoais do firebase no codigo
