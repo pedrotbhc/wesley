@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato - Frigorífico Flor do Campo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #faf6f0; color: #333; line-height: 1.5; padding-top: 100px; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .conteudo { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    .cabecalho { position: fixed; top: 0; left: 0; right: 0; z-index: 10; background: #8b1e1e; color: #fff; }
+    .cabecalho-interno { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+    .logo { font-size: 22px; font-weight: bold; }
+    .busca { display: flex; flex: 1; min-width: 220px; gap: 6px; }
+    .busca input { flex: 1; padding: 8px 12px; border: none; border-radius: 6px; font-size: 15px; }
+    .busca button { padding: 8px 16px; border: none; border-radius: 6px; background: #f2b632; font-weight: bold; cursor: pointer; }
+    .menu { display: flex; gap: 16px; }
+    .menu a:hover { text-decoration: underline; }
+
+    .rodape { background: #333; color: #ddd; text-align: center; padding: 24px 20px; margin-top: 50px; font-size: 14px; }
+
+    .botao { display: block; width: 100%; padding: 11px 20px; background: #8b1e1e; color: #fff; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; }
+    .botao:hover { background: #6a1515; }
+
+    .titulo { color: #8b1e1e; margin: 30px 0 6px; font-size: 28px; }
+    .subtitulo { color: #777; margin-bottom: 24px; }
+    .colunas { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+    .cartao { flex: 1 1 320px; background: #fff; border: 1px solid #e5dccf; border-radius: 8px; padding: 22px; }
+    .cartao h2 { color: #8b1e1e; font-size: 20px; margin-bottom: 8px; }
+    label { display: block; margin: 12px 0 4px; font-size: 14px; }
+    .campo { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; font-family: inherit; background: #fff; }
+    .campo:focus { outline: none; border-color: #8b1e1e; }
+    form .botao { margin-top: 16px; }
+    .info { padding: 12px 0; border-bottom: 1px solid #eee; }
+    .info:last-child { border-bottom: none; }
+    .info strong { display: block; }
+
+    @media (max-width: 800px) { body { padding-top: 160px; } }
+  </style>
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho-interno">
+      <a class="logo" href="index.html">🥩 Frigorífico Flor do Campo</a>
+      <form class="busca" action="produtos.html" method="get" role="search">
+        <input type="search" name="busca" placeholder="Buscar produtos...">
+        <button type="submit">Buscar</button>
+      </form>
+      <ul class="menu">
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Entrar</a></li>
+        <li><a href="carrinho.html">🛒 Carrinho (3)</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="conteudo">
+
+    <h1 class="titulo">Fale com a gente</h1>
+    <p class="subtitulo">Tire dúvidas, faça sugestões ou peça um orçamento.</p>
+
+    <div class="colunas">
+
+      <section class="cartao">
+        <h2>Envie uma mensagem</h2>
+        <form action="contato.html" method="get">
+          <label for="nome">Nome</label>
+          <input type="text" class="campo" id="nome" required>
+
+          <label for="email">E-mail</label>
+          <input type="email" class="campo" id="email" required>
+
+          <label for="assunto">Assunto</label>
+          <select class="campo" id="assunto">
+            <option>Dúvida sobre produtos</option>
+            <option>Meu pedido</option>
+            <option>Vendas para empresas</option>
+            <option>Outros</option>
+          </select>
+
+          <label for="mensagem">Mensagem</label>
+          <textarea class="campo" id="mensagem" rows="4" required></textarea>
+
+          <button type="submit" class="botao">Enviar mensagem</button>
+        </form>
+      </section>
+
+      <aside class="cartao">
+        <h2>Nossos contatos</h2>
+        <div class="info"><strong>📍 Endereço</strong>Rodovia Flor do Campo, km 12<br>Zona Rural - Sua Cidade/UF</div>
+        <div class="info"><strong>📞 Telefone / WhatsApp</strong>(00) 0000-0000</div>
+        <div class="info"><strong>🕗 Horário de atendimento</strong>Segunda a sábado, das 8h às 18h</div>
+        <div class="info"><strong>✉️ E-mail</strong>contato@flordocampo.com.br</div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 Frigorífico Flor do Campo · Seg a Sáb, 8h às 18h · (00) 0000-0000</p>
+  </footer>
+
+</body>
+</html>

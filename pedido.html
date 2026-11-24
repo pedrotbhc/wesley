@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedido confirmado - Frigorífico Flor do Campo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #faf6f0; color: #333; line-height: 1.5; padding-top: 100px; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    .conteudo { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    .cabecalho { position: fixed; top: 0; left: 0; right: 0; z-index: 10; background: #8b1e1e; color: #fff; }
+    .cabecalho-interno { max-width: 1100px; margin: 0 auto; padding: 14px 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+    .logo { font-size: 22px; font-weight: bold; }
+    .busca { display: flex; flex: 1; min-width: 220px; gap: 6px; }
+    .busca input { flex: 1; padding: 8px 12px; border: none; border-radius: 6px; font-size: 15px; }
+    .busca button { padding: 8px 16px; border: none; border-radius: 6px; background: #f2b632; font-weight: bold; cursor: pointer; }
+    .menu { display: flex; gap: 16px; }
+    .menu a:hover { text-decoration: underline; }
+
+    .rodape { background: #333; color: #ddd; text-align: center; padding: 24px 20px; margin-top: 50px; font-size: 14px; }
+
+    .botao { display: inline-block; padding: 10px 20px; background: #8b1e1e; color: #fff; border: none; border-radius: 6px; font-size: 15px; cursor: pointer; }
+    .botao:hover { background: #6a1515; }
+    .botao-contorno { background: #fff; color: #8b1e1e; border: 1px solid #8b1e1e; }
+    .botao-contorno:hover { background: #8b1e1e; color: #fff; }
+
+    .confirmacao { max-width: 500px; margin: 30px auto 0; text-align: center; background: #fff; border: 1px solid #e5dccf; border-radius: 10px; padding: 30px 24px; }
+    .icone { font-size: 60px; }
+    .confirmacao h1 { color: #8b1e1e; font-size: 26px; margin: 8px 0; }
+    .dados { text-align: left; margin: 22px 0; }
+    .linha { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
+    .botoes { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+
+    @media (max-width: 800px) { body { padding-top: 160px; } }
+  </style>
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho-interno">
+      <a class="logo" href="index.html">🥩 Frigorífico Flor do Campo</a>
+      <form class="busca" action="produtos.html" method="get" role="search">
+        <input type="search" name="busca" placeholder="Buscar produtos...">
+        <button type="submit">Buscar</button>
+      </form>
+      <ul class="menu">
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Entrar</a></li>
+        <li><a href="carrinho.html">🛒 Carrinho (3)</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <section class="confirmacao">
+      <div class="icone">✅</div>
+      <h1>Pedido realizado com sucesso!</h1>
+      <p>Obrigado por comprar no Frigorífico Flor do Campo.</p>
+
+      <div class="dados">
+        <div class="linha"><span>Pedido nº</span><strong>#20261112</strong></div>
+        <div class="linha"><span>Total</span><strong>R$ 162,60</strong></div>
+        <div class="linha"><span>Pagamento</span><strong>Pix</strong></div>
+        <div class="linha"><span>Entrega</span><strong>2 dias úteis</strong></div>
+      </div>
+
+      <div class="botoes">
+        <a href="conta.html" class="botao">Ver meus pedidos</a>
+        <a href="index.html" class="botao botao-contorno">Voltar à loja</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 Frigorífico Flor do Campo · Seg a Sáb, 8h às 18h · (00) 0000-0000</p>
+  </footer>
+
+</body>
+</html>

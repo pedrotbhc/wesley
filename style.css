@@ -1,0 +1,370 @@
+:root {
+  --vinho: #8b1e1e;
+  --vinho-escuro: #6a1515;
+  --creme: #fbf6ee;
+  --dourado: #f2b632;
+  --cinza: #6c757d;
+  --verde: #198754;
+  --vermelho: #dc3545;
+  --texto: #2b2222;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding-top: 120px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--creme);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  body { padding-top: 175px; }
+}
+
+a { color: var(--vinho); }
+h1, h2, h3, h4, h5, h6 { margin: 0 0 .5rem; line-height: 1.2; }
+p { margin: 0 0 1rem; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+hr { border: 0; border-top: 1px solid rgba(0, 0, 0, .15); margin: 1rem 0; }
+
+.conteudo {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.principal { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.principal-amplo { margin-top: 3rem; margin-bottom: 3rem; }
+
+.cabecalho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--vinho);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+.faixa-aviso {
+  background-color: var(--dourado);
+  color: #3b2a00;
+  font-size: .9rem;
+  text-align: center;
+  padding: .25rem;
+}
+
+.cabecalho-interno {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.35rem;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.busca {
+  display: flex;
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 520px;
+  gap: .5rem;
+}
+.busca .campo { flex: 1; }
+
+.menu { display: flex; flex-wrap: wrap; margin-left: auto; }
+.menu a { color: #fff; text-decoration: none; padding: .25rem .75rem; }
+.menu a:hover { color: var(--dourado); }
+
+.rodape {
+  background-color: #2b1a1a;
+  color: #e8dcdc;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+.rodape a { color: #e8dcdc; text-decoration: none; }
+.rodape a:hover { color: var(--dourado); }
+.rodape hr { border-top-color: rgba(255, 255, 255, .3); }
+.rodape-colunas { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.rodape-copy { text-align: center; font-size: .875rem; margin: 0; }
+
+@media (min-width: 768px) {
+  .rodape-colunas { grid-template-columns: repeat(3, 1fr); }
+}
+
+.grade { display: grid; gap: 1.5rem; }
+.grade-produtos { grid-template-columns: repeat(2, 1fr); }
+.grade-quatro { grid-template-columns: repeat(2, 1fr); }
+.grade-diferenciais { grid-template-columns: 1fr; }
+.grade-duas { grid-template-columns: 1fr; }
+.grade-carrinho { grid-template-columns: 1fr; }
+.grade-conta { grid-template-columns: 1fr; }
+
+@media (min-width: 768px) {
+  .grade-produtos { grid-template-columns: repeat(3, 1fr); }
+  .grade-quatro { grid-template-columns: repeat(4, 1fr); }
+  .grade-diferenciais { grid-template-columns: repeat(3, 1fr); }
+  .grade-duas { grid-template-columns: 1fr 1fr; }
+  .grade-conta { grid-template-columns: 1fr 3fr; }
+}
+
+@media (min-width: 992px) {
+  .grade-produtos { grid-template-columns: repeat(4, 1fr); }
+  .grade-carrinho { grid-template-columns: 2fr 1fr; }
+}
+
+.pilha { display: grid; gap: 1rem; align-content: start; }
+
+.banner {
+  background: linear-gradient(135deg, var(--vinho) 0%, #b5342b 100%);
+  color: #fff;
+  border-radius: 1rem;
+  padding: 3rem;
+  margin-bottom: 3rem;
+}
+.banner h1 { font-size: 2.5rem; font-weight: 700; }
+.banner p { font-size: 1.25rem; font-weight: 300; margin-bottom: 1.5rem; }
+
+.secao { margin-bottom: 3rem; }
+.titulo-secao { font-size: 1.5rem; color: var(--vinho); margin-bottom: 1rem; }
+.titulo-pagina { font-size: 1.75rem; color: var(--vinho); margin-bottom: 1.5rem; }
+.titulo-caixa { font-size: 1.75rem; color: var(--vinho); text-align: center; margin-bottom: .25rem; }
+.cabecalho-pagina {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+.cabecalho-pagina .titulo-pagina { margin-bottom: 0; }
+
+.categoria {
+  display: block;
+  background: #fff;
+  border: 1px solid #ead9c2;
+  border-radius: .75rem;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+.categoria:hover { border-color: var(--vinho); color: var(--vinho); }
+.categoria-emoji { display: block; font-size: 2.5rem; }
+
+.diferencial { text-align: center; }
+.diferencial-icone { font-size: 2.5rem; }
+
+.cartao {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .5rem;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+}
+.cartao-corpo { padding: 1rem; }
+.cartao-titulo { font-size: 1.25rem; margin-bottom: .5rem; }
+
+.cartao-produto {
+  display: flex;
+  flex-direction: column;
+  transition: transform .15s;
+}
+.cartao-produto:hover { transform: translateY(-4px); }
+.cartao-produto .cartao-corpo { flex: 1; display: flex; flex-direction: column; }
+.cartao-produto .botao { margin-top: auto; }
+
+.produto-imagem {
+  font-size: 4.5rem;
+  background: #f3e6d3;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem .5rem 0 0;
+}
+.produto-unidade { font-size: .875rem; color: var(--cinza); margin-bottom: .25rem; }
+.preco { color: var(--vinho); font-weight: 700; font-size: 1.25rem; margin-bottom: .5rem; }
+
+.selo {
+  display: inline-block;
+  padding: .35em .65em;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: .375rem;
+  color: #fff;
+  margin-bottom: .5rem;
+}
+.selo-bovino { background-color: var(--vermelho); }
+.selo-suino { background-color: #ffc107; color: #000; }
+.selo-ave { background-color: var(--verde); }
+.selo-embutido { background-color: var(--cinza); }
+.selo-preparo { background-color: #ffc107; color: #000; margin-bottom: 0; }
+.selo-entregue { background-color: var(--verde); margin-bottom: 0; }
+
+.botao {
+  display: inline-block;
+  padding: .375rem .75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: .375rem;
+}
+.botao-principal { background-color: var(--vinho); border-color: var(--vinho); color: #fff; }
+.botao-principal:hover { background-color: var(--vinho-escuro); border-color: var(--vinho-escuro); }
+.botao-destaque { background-color: var(--dourado); border-color: var(--dourado); color: #000; }
+.botao-destaque:hover { background-color: #f5c352; }
+.botao-contorno { background: transparent; border-color: #212529; color: #212529; }
+.botao-contorno:hover { background-color: #212529; color: #fff; }
+.botao-ativo { background-color: #212529; color: #fff; }
+.botao-remover { background: transparent; border-color: var(--vermelho); color: var(--vermelho); }
+.botao-remover:hover { background-color: var(--vermelho); color: #fff; }
+.botao-pequeno { padding: .25rem .5rem; font-size: .875rem; }
+.botao-grande { padding: .5rem 1rem; font-size: 1.25rem; }
+.botao-total { display: block; width: 100%; }
+
+.filtros { display: flex; flex-wrap: wrap; gap: .25rem; }
+
+.formulario { display: block; }
+.grupo-campo { margin-bottom: 1rem; }
+.rotulo { display: inline-block; margin-bottom: .5rem; }
+.campo {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--texto);
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: .375rem;
+}
+.campo:focus {
+  outline: 0;
+  border-color: #c25b5b;
+  box-shadow: 0 0 0 .25rem rgba(139, 30, 30, .2);
+}
+.campo-pequeno { padding: .25rem .5rem; font-size: .875rem; }
+.linha-campos { display: grid; grid-template-columns: 1fr; gap: 0 1rem; }
+.opcao { display: flex; align-items: center; gap: .5rem; }
+.linha-entre { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+
+@media (min-width: 768px) {
+  .linha-campos { grid-template-columns: 1fr 1fr; }
+}
+
+.caixa-formulario {
+  max-width: 440px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+}
+.caixa-formulario-larga { max-width: 560px; }
+.caixa-branca {
+  background: #fff;
+  border-radius: .5rem;
+  padding: 1.5rem;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+}
+
+.tabela-rolavel {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: .5rem;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+}
+.tabela { width: 100%; border-collapse: collapse; }
+.tabela th, .tabela td {
+  padding: .5rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #dee2e6;
+}
+.tabela thead th { background-color: #f8f9fa; }
+.tabela tbody tr:last-child td { border-bottom: 0; }
+.coluna-quantidade { width: 110px; }
+
+.resumo-lista { margin-bottom: 1rem; }
+.resumo-linha {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 0;
+  border-bottom: 1px solid #dee2e6;
+}
+.resumo-total { font-weight: 700; font-size: 1.25rem; border-bottom: 0; }
+
+.alerta-sucesso {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+  border-radius: .375rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.trilha { display: flex; gap: .5rem; margin-bottom: 1rem; color: var(--cinza); }
+.trilha li + li::before { content: "/"; padding-right: .5rem; }
+
+.paginacao { display: flex; justify-content: center; margin-top: 3rem; }
+.pagina {
+  padding: .375rem .75rem;
+  margin-left: -1px;
+  color: var(--vinho);
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #dee2e6;
+}
+.pagina-ativa { background-color: var(--vinho); border-color: var(--vinho); color: #fff; }
+.pagina-desativada { color: var(--cinza); pointer-events: none; }
+
+.menu-lateral {
+  background: #fff;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+}
+.menu-lateral a {
+  display: block;
+  padding: .5rem 1rem;
+  color: #212529;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+.menu-lateral a:hover { background-color: #f8f9fa; }
+.menu-lateral .item-ativo,
+.menu-lateral .item-ativo:hover { background-color: var(--vinho); color: #fff; }
+.menu-lateral .item-sair { color: var(--vermelho); }
+
+.pedido-confirmado { text-align: center; margin-top: 3rem; }
+.icone-grande { font-size: 2.5rem; }
+.cartao-pedido { max-width: 480px; margin: 1.5rem auto; text-align: left; }
+.linha-info { margin-bottom: .25rem; }
+
+.centralizado { text-align: center; }
+.negrito { font-weight: 700; }
+.sem-margem { margin: 0; }
+.margem-topo { margin-top: 1rem; }
+.margem-baixo { margin-bottom: 1.5rem; }
+.texto-pequeno { font-size: .875rem; }
+.texto-vinho { color: var(--vinho); }
+.texto-mudo { color: var(--cinza); }
+.texto-sucesso { color: var(--verde); }
+.texto-destaque { font-size: 1.25rem; font-weight: 300; }
