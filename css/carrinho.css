@@ -1,0 +1,124 @@
+
+.carrinho-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    background-image: url(image/fundo\ orange.png);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.caixa-produtos {
+    background: #ffffff;
+    width: 600px;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.caixa-resumo {
+    background: #ffffff;
+    width: 320px;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.caixa-produtos h3, .caixa-resumo h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.item-produto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.img-produto {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.detalhes-produto {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.detalhes-produto h4 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.acoes-item a {
+    font-size: 12px;
+    color: orange;
+    text-decoration: none;
+}
+
+.quantidade-controle {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.quantidade-controle button, .quantidade-controle span {
+    padding: 4px 10px;
+    background: #fff;
+    border: none;
+    font-size: 14px;
+}
+
+.preco-produto {
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.linha-resumo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #666;
+}
+
+.linha-resumo.total {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.cupom-link {
+    font-size: 13px;
+    color: orange;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.btn-continuar {
+    width: 100%;
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-continuar:hover {
+    background-color: orange;
+}
